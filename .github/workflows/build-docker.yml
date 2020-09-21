@@ -4,10 +4,13 @@ jobs:
   just_run_an_echo:
     runs-on: ubuntu-latest
     steps:
+    - uses: actions/checkout@master
+      with:
+        ref: refs/heads/master
     -name: run echo  
      run: echo Hello World!
-     
-  build_docker_related_things:
+   
+   build_docker_related_things:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
