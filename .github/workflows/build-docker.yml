@@ -10,11 +10,11 @@ jobs:
     - name: run echo  
       run: echo Hello World!
   
-  build_docker_related_things:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@master
-      with:
-        ref: refs/heads/master
-    - name: Build docker image
-      run: docker build --tag frontend ${PWD}
+  #build_docker_related_things:
+  #  runs-on: ubuntu-latest
+  #  steps:
+  #  - uses: actions/checkout@master
+  #    with:
+  #      ref: refs/heads/master
+  #  - name: Build docker image
+  #    run: docker build --tag frontend ${PWD}
