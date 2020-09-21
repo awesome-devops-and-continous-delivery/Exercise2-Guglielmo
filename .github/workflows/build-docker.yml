@@ -2,7 +2,10 @@ name: Build Docker
 on: [push]
 jobs:
   just_run_an_echo:
-    run: echo "Hello World!"
+    runs-on: ubuntu-latest
+    steps:
+    -name: run echo  
+     run: echo "Hello World!"
   build_docker_related_things:
     runs-on: ubuntu-latest
     steps:
