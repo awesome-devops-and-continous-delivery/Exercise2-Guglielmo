@@ -5,7 +5,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     -name: run echo  
-     run: echo "Hello World!"
+     run: echo Hello World!
+     
   build_docker_related_things:
     runs-on: ubuntu-latest
     steps:
