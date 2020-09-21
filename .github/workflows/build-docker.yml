@@ -1,0 +1,25 @@
+name: Build Docker
+on: [push]
+jobs:
+  build_nodejs_related_things:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+      with:
+        ref: refs/heads/master
+    - uses: actions/setup-node@v1
+      with:
+        node-version: 12.x
+    - name: Npm Install
+      run: npm install
+    - name: Npm Pack
+      run: npm pack
+
+  build_docker_related_things:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+      with:
+        ref: refs/heads/master
+    - name: Build docker image
+      run: docker build --tag expenses-tracker ${PWD}
